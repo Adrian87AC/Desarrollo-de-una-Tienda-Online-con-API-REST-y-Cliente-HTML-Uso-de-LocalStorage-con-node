@@ -1,9 +1,11 @@
-[
-  {
+ [
+   {
+    "id": 1,
     "usuario": "admin",
     "contrasena": "12345"
   },
   {
+    "id": 2,
     "usuario": "cliente",
     "contrasena": "password"
   }

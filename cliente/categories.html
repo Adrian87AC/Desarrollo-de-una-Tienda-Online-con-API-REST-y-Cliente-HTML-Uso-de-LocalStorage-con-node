@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categorías y Productos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="dashboard.html">Tienda DWEC</a>
+            <div class="d-flex">
+                <a href="cart.html" class="btn btn-outline-light me-2">🛒 Carrito (<span id="cartCount">0</span>)</a>
+                <button class="btn btn-danger" onclick="logout()">Cerrar Sesión</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid mt-4">
+        <div class="row">
+            <div class="col-md-3">
+                <h3 class="text-primary mb-3">Filtrar por Categoría</h3>
+                <div id="categoryList" class="list-group">
+                    </div>
+            </div>
+
+            <div class="col-md-9">
+                <h1 id="productTitle" class="mb-4">Todos los Productos</h1>
+                <div id="productList" class="row row-cols-1 row-cols-md-3 g-4">
+                    </div>
+                <div id="noProductsMessage" class="alert alert-info mt-4 d-none">No hay productos en esta categoría.</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/cart.js"></script>
+    <script>
+        let allProducts = [];
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const { categorias, productos } = getTiendaData();
+            allProducts = productos;
+
+            renderCategories(categorias);
+            renderProducts(allProducts); // Mostrar todos los productos inicialmente
+        });
+
+        function renderCategories(categorias) {
+            const listContainer = document.getElementById('categoryList');
+            listContainer.innerHTML = '';
+            
+            // Opción para ver todos
+            listContainer.innerHTML += `<a href="#" class="category-link list-group-item list-group-item-action active" data-id="all">Todas las Categorías</a>`;
+
+            categorias.forEach(cat => {
+                const link = document.createElement('a');
+                link.href = "#";
+                link.textContent = cat.nombre;
+                link.classList.add('category-link', 'list-group-item', 'list-group-item-action');
+                link.setAttribute('data-id', cat.id);
+                link.addEventListener('click', () => filterProducts(cat.id, cat.nombre));
+                listContainer.appendChild(link);
+            });
+            
+            document.querySelector('[data-id="all"]').addEventListener('click', () => filterProducts('all', 'Todos los Productos'));
+        }
+
+        function filterProducts(categoryId, categoryName) {
+            // Actualizar la clase "active"
+            document.querySelectorAll('.category-link').forEach(link => link.classList.remove('active'));
+            document.querySelector(`[data-id="${categoryId}"]`).classList.add('active');
+            
+            // Filtrar productos
+            const filtered = categoryId === 'all' ? allProducts : allProducts.filter(p => p.id_categoria == categoryId);
+            
+            document.getElementById('productTitle').textContent = categoryName;
+            renderProducts(filtered);
+        }
+
+        function renderProducts(productos) {
+            const listContainer = document.getElementById('productList');
+            listContainer.innerHTML = '';
+            
+            if (productos.length === 0) {
+                document.getElementById('noProductsMessage').classList.remove('d-none');
+                return;
+            }
+            document.getElementById('noProductsMessage').classList.add('d-none');
+
+
+            productos.forEach(producto => {
+                const col = document.createElement('div');
+                col.classList.add('col');
+                col.innerHTML = `
+                    <div class="card h-100 shadow-sm product-card">
+                        <img src="${producto.imagen}" class="card-img-top" alt="${producto.nombre}">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">${producto.nombre}</h5>
+                            <p class="card-text text-success fw-bold">$${producto.precio.toFixed(2)}</p>
+                            <a href="product.html?id=${producto.id}" class="btn btn-outline-primary mt-auto">Ver Detalles</a>
+                            <button class="btn btn-success mt-2" 
+                                onclick="addToCart('${producto.id}', '${producto.nombre}', ${producto.precio}, '${producto.imagen}')">
+                                Añadir al Carrito
+                            </button>
+                        </div>
+                    </div>
+                `;
+                listContainer.appendChild(col);
+            });
+        }
+    </script>
+</body>
+</html>

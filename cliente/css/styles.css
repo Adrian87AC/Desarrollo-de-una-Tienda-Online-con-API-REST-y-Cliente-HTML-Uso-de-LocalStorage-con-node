@@ -1,0 +1,59 @@
+/* client/css/style.css */
+/* Mejoras visuales y responsivas con CSS */
+:root {
+    --bs-primary: #007bff; /* Color principal de Bootstrap */
+}
+
+body {
+    background-color: #f8f9fa;
+}
+
+.product-card {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border-radius: 12px;
+    overflow: hidden;
+    height: 100%;
+}
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.navbar {
+    border-bottom: 3px solid var(--bs-primary);
+}
+
+.product-detail-img {
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para las categorías */
+.category-link {
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+    border-radius: 8px;
+    padding: 10px 15px;
+    margin-bottom: 8px;
+    display: block;
+    border: 1px solid #dee2e6;
+}
+.category-link:hover {
+    background-color: var(--bs-primary);
+    color: white !important;
+    transform: scale(1.02);
+}
+
+.cart-item-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 5px;
+}

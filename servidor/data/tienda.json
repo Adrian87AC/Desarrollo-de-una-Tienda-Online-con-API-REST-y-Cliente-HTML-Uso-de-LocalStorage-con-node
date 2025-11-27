@@ -1,0 +1,12 @@
+{
+  "categorias": [
+    {"id": 1, "nombre": "Deportivos"},
+    {"id": 2, "nombre": "SUVs"},
+    {"id": 3, "nombre": "Eléctricos"}
+  ],
+  "productos": [
+    {"id": "c001", "nombre": "Deportivo GT", "precio": 95000, "destacado": true, "id_categoria": 1, "imagen": "gt.jpg"},
+    {"id": "c002", "nombre": "SUV Familiar", "precio": 45000, "destacado": false, "id_categoria": 2, "imagen": "suv.jpg"},
+    {"id": "c003", "nombre": "Eléctrico Urbano", "precio": 32000, "destacado": true, "id_categoria": 3, "imagen": "ev.jpg"}
+  ]
+}

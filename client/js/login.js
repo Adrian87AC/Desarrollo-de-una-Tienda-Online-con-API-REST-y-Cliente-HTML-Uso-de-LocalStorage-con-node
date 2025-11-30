@@ -159,7 +159,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    console.log('✅ Event listener agregado al formulario');
+    console.log('Event listener agregado al formulario');
 });
 
-console.log('✅ Script login.js completamente ejecutado');
+console.log('Script login.js completamente ejecutado');

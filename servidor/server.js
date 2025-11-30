@@ -107,7 +107,7 @@ app.listen(PORT, () => {
     console.log('\nCredenciales de prueba:');
     console.log('   Usuario: admin | Contraseña: 12345');
     console.log('   Usuario: cliente | Contraseña: password');
-    console.log('\n⏹  Presiona CTRL+C para detener el servidor\n');
+    console.log('\n Presiona CTRL+C para detener el servidor\n');
 
     // Verificar que los archivos de datos existen
     const usuariosPath = path.join(__dirname, 'data', 'usuarios.json');

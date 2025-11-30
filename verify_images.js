@@ -10,7 +10,7 @@ try {
     let missingImages = 0;
     let totalImages = 0;
 
-    console.log('🔍 Verifying images...');
+    console.log('Verifying images...');
 
     productos.forEach(producto => {
         if (producto.imagen) {
@@ -20,10 +20,10 @@ try {
             const fullPath = path.join(imgBasePath, relativePath);
 
             if (!fs.existsSync(fullPath)) {
-                console.error(`❌ Missing: ${producto.imagen} (ID: ${producto.id})`);
+                console.error(`Missing: ${producto.imagen} (ID: ${producto.id})`);
                 missingImages++;
             } else {
-                // console.log(`✅ Found: ${producto.imagen}`);
+                // console.log(`Found: ${producto.imagen}`);
             }
         }
     });
@@ -33,9 +33,9 @@ try {
     console.log(`Missing Images: ${missingImages}`);
 
     if (missingImages === 0) {
-        console.log('✅ All images exist!');
+        console.log('All images exist!');
     } else {
-        console.log('⚠️ Some images are missing.');
+        console.log('Some images are missing.');
     }
 
 } catch (err) {

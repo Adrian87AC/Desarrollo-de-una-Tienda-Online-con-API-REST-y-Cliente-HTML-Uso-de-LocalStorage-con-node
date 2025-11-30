@@ -1,73 +1,452 @@
 {
   "categorias": [
-    {"id": 1, "nombre": "Biceps"},
-    {"id": 2, "nombre": "Triceps"},
-    {"id": 3, "nombre": "Antebrazo"},
-    {"id": 4, "nombre": "Pecho"},
-    {"id": 5, "nombre": "Trapecio"},
-    {"id": 6, "nombre": "Dorsales"},
-    {"id": 7, "nombre": "Hombros"},
-    {"id": 8, "nombre": "Cuadriceps"},
-    {"id": 9, "nombre": "Isquiotibiales"},
-    {"id": 10, "nombre": "Aductores"},
-    {"id": 11, "nombre": "Femorales"},
-    {"id": 12, "nombre": "Gemelos"},
-    {"id": 13, "nombre": "Glúteos"},
-    {"id": 14, "nombre": "Cardio"}
+    {
+      "id": 1,
+      "nombre": "Biceps"
+    },
+    {
+      "id": 2,
+      "nombre": "Triceps"
+    },
+    {
+      "id": 3,
+      "nombre": "Antebrazo"
+    },
+    {
+      "id": 4,
+      "nombre": "Pecho"
+    },
+    {
+      "id": 5,
+      "nombre": "Trapecio"
+    },
+    {
+      "id": 6,
+      "nombre": "Dorsales"
+    },
+    {
+      "id": 7,
+      "nombre": "Hombros"
+    },
+    {
+      "id": 8,
+      "nombre": "Cuadriceps"
+    },
+    {
+      "id": 9,
+      "nombre": "Isquiotibiales"
+    },
+    {
+      "id": 10,
+      "nombre": "Aductores"
+    },
+    {
+      "id": 11,
+      "nombre": "Femorales"
+    },
+    {
+      "id": 12,
+      "nombre": "Gemelos"
+    },
+    {
+      "id": 13,
+      "nombre": "Glúteos"
+    },
+    {
+      "id": 14,
+      "nombre": "Cardio"
+    }
   ],
   "productos": [
-    {"id": "c001", "nombre": "Máquina de curl de biceps", "precio": 95000, "destacado": true, "id_categoria": 1, "imagen": "curlBiceps.jpg"},
-    {"id": "c002", "nombre": "Máquina de curl predicador", "precio": 45000, "destacado": false, "id_categoria": 1, "imagen": "predicador.jpg"},
-    {"id": "c003", "nombre": "Máquina de curl de palanca", "precio": 32000, "destacado": true, "id_categoria": 1, "imagen": "curlPalanca.jpg"},
-
-    {"id": "c004", "nombre": "Máquina de extensión de triceps", "precio": 95000, "destacado": true, "id_categoria": 2, "imagen": "extTriceps.jpg"},
-    {"id": "c005", "nombre": "Máquina de polea de triceps", "precio": 45000, "destacado": false, "id_categoria": 2, "imagen": "polTriceps.jpg"},
-    {"id": "c006", "nombre": "Máquina de press de triceps", "precio": 32000, "destacado": true, "id_categoria": 2, "imagen": "pressTriceps.jpg"},
-
-    {"id": "c007", "nombre": "Rodillo de muñeca", "precio": 95000, "destacado": true, "id_categoria": 3, "imagen": "rodMuñeca.jpg"},
-    {"id": "c008", "nombre": "Máquina de fortalecedores de agarre", "precio": 45000, "destacado": false, "id_categoria": 3, "imagen": "fortAgarre.jpg"},
-    {"id": "c009", "nombre": "Máquina de rotadoras", "precio": 32000, "destacado": true, "id_categoria": 3, "imagen": "rotadora.jpg"},
-
-    {"id": "c0010", "nombre": "Máquina de press de pecho", "precio": 95000, "destacado": true, "id_categoria": 4, "imagen": "pressBanca.jpg"},
-    {"id": "c0011", "nombre": "Máquina de apertura de pecho", "precio": 45000, "destacado": false, "id_categoria": 4, "imagen": "aperturaPecho.jpg"},
-    {"id": "c0012", "nombre": "Máquina de ejercicios con cable inclinado", "precio": 32000, "destacado": true, "id_categoria": 4, "imagen": "cableInclinado.jpg"},
-
-    {"id": "c0013", "nombre": "Máquina de encogimiento de trapecio", "precio": 95000, "destacado": true, "id_categoria": 5, "imagen": "encTrapecio.jpg"},
-    {"id": "c0014", "nombre": "Máquina de reverse fly", "precio": 45000, "destacado": false, "id_categoria": 5, "imagen": "reverseFly.jpg"},
-    {"id": "c0015", "nombre": "Máquina de polea con barra ", "precio": 32000, "destacado": true, "id_categoria": 5, "imagen": "poleaBarra.jpg"},
-
-    {"id": "c0016", "nombre": "Máquina de jalón al pecho con agarre amplio", "precio": 95000, "destacado": true, "id_categoria": 6, "imagen": "jalon.jpg"},
-    {"id": "c0017", "nombre": "Remo en barra T", "precio": 45000, "destacado": false, "id_categoria": 6, "imagen": "remoT.jpg"},
-    {"id": "c0018", "nombre": "Remo sentado con discos", "precio": 32000, "destacado": true, "id_categoria": 6, "imagen": "curlPalanca.jpg"},
-
-    {"id": "c0019", "nombre": "Shoulder Press", "precio": 95000, "destacado": true, "id_categoria": 7, "imagen": "curlBiceps.jpg"},
-    {"id": "c0020", "nombre": "Press militar", "precio": 45000, "destacado": false, "id_categoria": 7, "imagen": "predicador.jpg"},
-    {"id": "c0021", "nombre": "Máquina de elevaciones laterales", "precio": 32000, "destacado": true, "id_categoria": 7, "imagen": "curlPalanca.jpg"},
-
-    {"id": "c0022", "nombre": "Máquina de extensión de rodilla", "precio": 95000, "destacado": true, "id_categoria": 8, "imagen": "curlBiceps.jpg"},
-    {"id": "c0023", "nombre": "Máquina de prensa", "precio": 45000, "destacado": false, "id_categoria": 8, "imagen": "predicador.jpg"},
-    {"id": "c0024", "nombre": "Máquina de sentadilla de multipower", "precio": 32000, "destacado": true, "id_categoria": 8, "imagen": "curlPalanca.jpg"},
-
-    {"id": "c0025", "nombre": "Máquina de prensa posicion isquio", "precio": 95000, "destacado": true, "id_categoria": 9, "imagen": "curlBiceps.jpg"},
-    {"id": "c0026", "nombre": "Máquina de banco isquiotibiales", "precio": 45000, "destacado": false, "id_categoria": 9, "imagen": "predicador.jpg"},
-    {"id": "c0027", "nombre": "Máquina de curl femoral sentado", "precio": 32000, "destacado": true, "id_categoria": 9, "imagen": "curlPalanca.jpg"},
-
-    {"id": "c0028", "nombre": "Máquina de curl de aductores", "precio": 95000, "destacado": true, "id_categoria": 10, "imagen": "curlBiceps.jpg"},
-
-    {"id": "c0029", "nombre": "Máquina de curl femoral sentado", "precio": 95000, "destacado": true, "id_categoria": 11, "imagen": "curlBiceps.jpg"},
-    {"id": "c0030", "nombre": "Máquina de curl femoral tumbado", "precio": 45000, "destacado": false, "id_categoria": 11, "imagen": "predicador.jpg"},
-
-    {"id": "c0031", "nombre": "Máquina de gemelo sentado", "precio": 45000, "destacado": false, "id_categoria": 12, "imagen": "predicador.jpg"},
-    {"id": "c0032", "nombre": "Máquina de sentadilla de gemelos", "precio": 32000, "destacado": true, "id_categoria": 12, "imagen": "curlPalanca.jpg"},
-    {"id": "c0033", "nombre": "Máquina de elevacion de gemelo", "precio": 95000, "destacado": true, "id_categoria": 12, "imagen": "curlBiceps.jpg"},
-
-    {"id": "c0034", "nombre": "Máquina de hip trust", "precio": 45000, "destacado": false, "id_categoria": 13, "imagen": "predicador.jpg"},
-    {"id": "c0035", "nombre": "Patada de glúteo en polea", "precio": 32000, "destacado": true, "id_categoria": 13, "imagen": "curlPalanca.jpg"},
-    {"id": "c0036", "nombre": "Escaladora", "precio": 95000, "destacado": true, "id_categoria": 13, "imagen": "curlBiceps.jpg"},
-    
-    {"id": "c0034", "nombre": "Bicicleta ciclostatica", "precio": 45000, "destacado": false, "id_categoria": 14, "imagen": "predicador.jpg"},
-    {"id": "c0035", "nombre": "Eliptica", "precio": 32000, "destacado": true, "id_categoria": 14, "imagen": "curlPalanca.jpg"},
-    {"id": "c0036", "nombre": "Cinta de correr", "precio": 95000, "destacado": true, "id_categoria": 14, "imagen": "curlBiceps.jpg"}
-
+    {
+      "id": "c001",
+      "nombre": "Máquina de curl de biceps",
+      "precio": 95000,
+      "destacado": true,
+      "id_categoria": 1,
+      "imagen": "/img/Biceps/curlBiceps.jpg",
+      "descripcion": "Diseñada para aislar y fortalecer los bíceps con un movimiento controlado y ergonómico.",
+      "stock": 2
+    },
+    {
+      "id": "c002",
+      "nombre": "Máquina de curl predicador",
+      "precio": 45000,
+      "destacado": false,
+      "id_categoria": 1,
+      "imagen": "/img/Biceps/curlPredicadorBiceps.jpg",
+      "descripcion": "Diseñada para aislar y fortalecer los bíceps con un movimiento controlado y ergonómico.",
+      "stock": 10
+    },
+    {
+      "id": "c003",
+      "nombre": "Máquina de curl de palanca",
+      "precio": 32000,
+      "destacado": true,
+      "id_categoria": 1,
+      "imagen": "/img/Biceps/curlPalancaBiceps.jpg",
+      "descripcion": "Diseñada para aislar y fortalecer los bíceps con un movimiento controlado y ergonómico.",
+      "stock": 10
+    },
+    {
+      "id": "c004",
+      "nombre": "Máquina de extensión de triceps",
+      "precio": 95000,
+      "destacado": true,
+      "id_categoria": 2,
+      "imagen": "/img/Triceps/extensionTriceps.jpg",
+      "descripcion": "Diseñada para aislar y fortalecer los triceps con un movimiento controlado y ergonómico.",
+      "stock": 10
+    },
+    {
+      "id": "c005",
+      "nombre": "Máquina de polea de triceps",
+      "precio": 45000,
+      "destacado": false,
+      "id_categoria": 2,
+      "imagen": "/img/Triceps/poleaTriceps.jpg",
+      "descripcion": "Diseñada para aislar y fortalecer los triceps con un movimiento controlado y ergonómico.",
+      "stock": 10
+    },
+    {
+      "id": "c006",
+      "nombre": "Máquina de press de triceps",
+      "precio": 32000,
+      "destacado": true,
+      "id_categoria": 2,
+      "imagen": "/img/Triceps/pressTriceps.jpg",
+      "descripcion": "Diseñada para aislar y fortalecer los triceps con un movimiento controlado y ergonómico.",
+      "stock": 10
+    },
+    {
+      "id": "c007",
+      "nombre": "Rodillo de muñeca",
+      "precio": 95000,
+      "destacado": true,
+      "id_categoria": 3,
+      "imagen": "/img/Antebrazo/rodilloMuñeca.jpg",
+      "descripcion": "Diseñada para aislar y fortalecer los antebrazos con un movimiento controlado y ergonómico.",
+      "stock": 10
+    },
+    {
+      "id": "c008",
+      "nombre": "Máquina de fortalecedores de agarre",
+      "precio": 45000,
+      "destacado": false,
+      "id_categoria": 3,
+      "imagen": "/img/Antebrazo/fortalecedoresAgarre.jpg",
+      "descripcion": "Diseñada para aislar y fortalecer los antebrazos con un movimiento controlado y ergonómico.",
+      "stock": 10
+    },
+    {
+      "id": "c009",
+      "nombre": "Máquina de rotadoras",
+      "precio": 32000,
+      "destacado": true,
+      "id_categoria": 3,
+      "imagen": "/img/Antebrazo/rotadoras.jpg",
+      "descripcion": "Diseñada para aislar y fortalecer los antebrazos con un movimiento controlado y ergonómico.",
+      "stock": 10
+    },
+    {
+      "id": "c0010",
+      "nombre": "Máquina de press de pecho",
+      "precio": 95000,
+      "destacado": true,
+      "id_categoria": 4,
+      "imagen": "/img/Pecho/pressPecho.jpg",
+      "descripcion": "Diseñada para aislar y fortalecer el pecho con un movimiento controlado y ergonómico.",
+      "stock": 10
+    },
+    {
+      "id": "c0011",
+      "nombre": "Máquina de apertura de pecho",
+      "precio": 45000,
+      "destacado": false,
+      "id_categoria": 4,
+      "imagen": "/img/Pecho/aperturaPecho.jpg",
+      "descripcion": "Diseñada para aislar y fortalecer el pecho con un movimiento controlado y ergonómico.",
+      "stock": 10
+    },
+    {
+      "id": "c0012",
+      "nombre": "Máquina de press pecho inclinado",
+      "precio": 32000,
+      "destacado": true,
+      "id_categoria": 4,
+      "imagen": "/img/Pecho/inclinadoPecho.jpg",
+      "descripcion": "Diseñada para aislar y fortalecer el pecho con un movimiento controlado y ergonómico.",
+      "stock": 10
+    },
+    {
+      "id": "c0013",
+      "nombre": "Máquina de encogimiento de trapecio",
+      "precio": 95000,
+      "destacado": true,
+      "id_categoria": 5,
+      "imagen": "/img/Trapecio/encogimientoTrapecio.jpg",
+      "descripcion": "Diseñada para aislar y fortalecer el trapecio con un movimiento controlado y ergonómico.",
+      "stock": 10
+    },
+    {
+      "id": "c0014",
+      "nombre": "Máquina de reverse fly",
+      "precio": 45000,
+      "destacado": false,
+      "id_categoria": 5,
+      "imagen": "/img/Trapecio/reverseFly.jpg",
+      "descripcion": "Diseñada para aislar y fortalecer el trapecio con un movimiento controlado y ergonómico.",
+      "stock": 10
+    },
+    {
+      "id": "c0015",
+      "nombre": "Máquina de polea con barra ",
+      "precio": 32000,
+      "destacado": true,
+      "id_categoria": 5,
+      "imagen": "/img/Trapecio/Trapecio.jpg",
+      "descripcion": "Diseñada para aislar y fortalecer el trapecio con un movimiento controlado y ergonómico.",
+      "stock": 10
+    },
+    {
+      "id": "c0016",
+      "nombre": "Máquina de jalón al pecho con agarre amplio",
+      "precio": 95000,
+      "destacado": true,
+      "id_categoria": 6,
+      "imagen": "/img/Dorsales/jalon.jpg",
+      "descripcion": "Diseñada para aislar y fortalecer el trapecio con un movimiento controlado y ergonómico.",
+      "stock": 10
+    },
+    {
+      "id": "c0017",
+      "nombre": "Remo en barra T",
+      "precio": 45000,
+      "destacado": false,
+      "id_categoria": 6,
+      "imagen": "/img/Dorsales/barraT.jpg",
+      "descripcion": "Diseñada para aislar y fortalecer el trapecio con un movimiento controlado y ergonómico.",
+      "stock": 10
+    },
+    {
+      "id": "c0018",
+      "nombre": "Remo sentado con discos",
+      "precio": 32000,
+      "destacado": true,
+      "id_categoria": 6,
+      "imagen": "/img/Dorsales/Dorsales.jpg",
+      "descripcion": "Diseñada para aislar y fortalecer el trapecio con un movimiento controlado y ergonómico.",
+      "stock": 10
+    },
+    {
+      "id": "c0019",
+      "nombre": "Shoulder Press",
+      "precio": 95000,
+      "destacado": true,
+      "id_categoria": 7,
+      "imagen": "/img/Hombros/shoulderPress.jpg",
+      "descripcion": "Diseñada para aislar y fortalecer el trapecio con un movimiento controlado y ergonómico.",
+      "stock": 10
+    },
+    {
+      "id": "c0020",
+      "nombre": "Deltoides posterior",
+      "precio": 45000,
+      "destacado": false,
+      "id_categoria": 7,
+      "imagen": "/img/Hombros/deltoidesPosterior.jpg",
+      "descripcion": "Diseñada para aislar y fortalecer el trapecio con un movimiento controlado y ergonómico.",
+      "stock": 10
+    },
+    {
+      "id": "c0021",
+      "nombre": "Máquina de elevaciones laterales",
+      "precio": 32000,
+      "destacado": true,
+      "id_categoria": 7,
+      "imagen": "/img/Hombros/elevacionesLaterales.jpg",
+      "descripcion": "Diseñada para aislar y fortalecer el trapecio con un movimiento controlado y ergonómico.",
+      "stock": 10
+    },
+    {
+      "id": "c0022",
+      "nombre": "Máquina de extensión de rodilla",
+      "precio": 95000,
+      "destacado": true,
+      "id_categoria": 8,
+      "imagen": "/img/Cuadriceps/extensionRodilla.jpg",
+      "descripcion": "Diseñada para aislar y fortalecer el trapecio con un movimiento controlado y ergonómico.",
+      "stock": 10
+    },
+    {
+      "id": "c0023",
+      "nombre": "Máquina de prensa",
+      "precio": 45000,
+      "destacado": false,
+      "id_categoria": 8,
+      "imagen": "/img/Cuadriceps/prensa.jpg",
+      "descripcion": "Diseñada para aislar y fortalecer el trapecio con un movimiento controlado y ergonómico.",
+      "stock": 10
+    },
+    {
+      "id": "c0024",
+      "nombre": "Máquina de sentadilla de multipower",
+      "precio": 32000,
+      "destacado": true,
+      "id_categoria": 8,
+      "imagen": "/img/Cuadriceps/sentadillaMultiPower.jpg",
+      "descripcion": "Diseñada para aislar y fortalecer el trapecio con un movimiento controlado y ergonómico.",
+      "stock": 10
+    },
+    {
+      "id": "c0025",
+      "nombre": "Máquina de prensa posicion isquio",
+      "precio": 95000,
+      "destacado": true,
+      "id_categoria": 9,
+      "imagen": "/img/Isquiotibiales/prensaIsquios.jpg",
+      "descripcion": "Diseñada para aislar y fortalecer el trapecio con un movimiento controlado y ergonómico.",
+      "stock": 10
+    },
+    {
+      "id": "c0026",
+      "nombre": "Máquina de banco isquiotibiales",
+      "precio": 45000,
+      "destacado": false,
+      "id_categoria": 9,
+      "imagen": "/img/Isquiotibiales/bancoIsquios.jpg",
+      "descripcion": "Diseñada para aislar y fortalecer el trapecio con un movimiento controlado y ergonómico.",
+      "stock": 10
+    },
+    {
+      "id": "c0027",
+      "nombre": "Máquina de curl isquiotibiales",
+      "precio": 32000,
+      "destacado": true,
+      "id_categoria": 9,
+      "imagen": "/img/Isquiotibiales/curlIsquios.jpg",
+      "descripcion": "Diseñada para aislar y fortalecer el trapecio con un movimiento controlado y ergonómico.",
+      "stock": 10
+    },
+    {
+      "id": "c0028",
+      "nombre": "Máquina de curl de aductores",
+      "precio": 95000,
+      "destacado": true,
+      "id_categoria": 10,
+      "imagen": "/img/Aductores/curlAductores.jpg",
+      "descripcion": "Diseñada para aislar y fortalecer el trapecio con un movimiento controlado y ergonómico.",
+      "stock": 10
+    },
+    {
+      "id": "c0029",
+      "nombre": "Máquina de curl femoral sentado",
+      "precio": 95000,
+      "destacado": true,
+      "id_categoria": 11,
+      "imagen": "/img/Femorales/femoralSentado.jpg",
+      "descripcion": "Diseñada para aislar y fortalecer el trapecio con un movimiento controlado y ergonómico.",
+      "stock": 10
+    },
+    {
+      "id": "c0030",
+      "nombre": "Máquina de curl femoral tumbado",
+      "precio": 45000,
+      "destacado": false,
+      "id_categoria": 11,
+      "imagen": "/img/Femorales/femoralTumbado.jpg",
+      "descripcion": "Diseñada para aislar y fortalecer el trapecio con un movimiento controlado y ergonómico.",
+      "stock": 10
+    },
+    {
+      "id": "c0031",
+      "nombre": "Máquina de gemelo sentado",
+      "precio": 45000,
+      "destacado": false,
+      "id_categoria": 12,
+      "imagen": "/img/Gemelos/gemeloSentado.jpg",
+      "descripcion": "Diseñada para aislar y fortalecer el trapecio con un movimiento controlado y ergonómico.",
+      "stock": 10
+    },
+    {
+      "id": "c0032",
+      "nombre": "Máquina de sentadilla de gemelos",
+      "precio": 32000,
+      "destacado": true,
+      "id_categoria": 12,
+      "imagen": "/img/Gemelos/sentadillaGemelos.jpg",
+      "descripcion": "Diseñada para aislar y fortalecer el trapecio con un movimiento controlado y ergonómico.",
+      "stock": 10
+    },
+    {
+      "id": "c0033",
+      "nombre": "Máquina de elevacion de gemelo",
+      "precio": 95000,
+      "destacado": true,
+      "id_categoria": 12,
+      "imagen": "/img/Gemelos/elevacionGemelos.jpg",
+      "descripcion": "Diseñada para aislar y fortalecer el trapecio con un movimiento controlado y ergonómico.",
+      "stock": 10
+    },
+    {
+      "id": "c0034",
+      "nombre": "Máquina de hip trust",
+      "precio": 45000,
+      "destacado": false,
+      "id_categoria": 13,
+      "imagen": "/img/Gluteos/hipTrust.jpg",
+      "descripcion": "Diseñada para aislar y fortalecer el trapecio con un movimiento controlado y ergonómico.",
+      "stock": 10
+    },
+    {
+      "id": "c0035",
+      "nombre": "Patada de gluteo en polea",
+      "precio": 32000,
+      "destacado": true,
+      "id_categoria": 13,
+      "imagen": "/img/Gluteos/patadaGluteo.jpg",
+      "descripcion": "Diseñada para aislar y fortalecer el trapecio con un movimiento controlado y ergonómico.",
+      "stock": 10
+    },
+    {
+      "id": "c0036",
+      "nombre": "Escaladora",
+      "precio": 95000,
+      "destacado": true,
+      "id_categoria": 13,
+      "imagen": "/img/Gluteos/escaladora.jpg",
+      "descripcion": "Diseñada para aislar y fortalecer el trapecio con un movimiento controlado y ergonómico.",
+      "stock": 10
+    },
+    {
+      "id": "c0037",
+      "nombre": "Bicicleta cicloestatica",
+      "precio": 45000,
+      "destacado": false,
+      "id_categoria": 14,
+      "imagen": "/img/Cardio/bicicletaCiclostatica.jpg",
+      "descripcion": "Diseñada para aislar y fortalecer el trapecio con un movimiento controlado y ergonómico.",
+      "stock": 10
+    },
+    {
+      "id": "c0038",
+      "nombre": "Eliptica",
+      "precio": 32000,
+      "destacado": true,
+      "id_categoria": 14,
+      "imagen": "/img/Cardio/eliptica.jpg",
+      "descripcion": "Diseñada para aislar y fortalecer el trapecio con un movimiento controlado y ergonómico.",
+      "stock": 10
+    },
+    {
+      "id": "c0039",
+      "nombre": "Cinta de correr",
+      "precio": 95000,
+      "destacado": true,
+      "id_categoria": 14,
+      "imagen": "/img/Cardio/cintaCorrer.jpg",
+      "descripcion": "Diseñada para aislar y fortalecer el trapecio con un movimiento controlado y ergonómico.",
+      "stock": 10
+    }
   ]
 }

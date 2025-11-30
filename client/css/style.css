@@ -1,14 +1,30 @@
 /* ==========================================
-   GYM SHOP - Estilos Personalizados
+   GYM SHOP - Estilos Personalizados (Soft Modern)
    ========================================== */
 
 :root {
-    --primary-color: #0d6efd;
-    --secondary-color: #6c757d;
-    --success-color: #198754;
-    --danger-color: #dc3545;
-    --dark-color: #212529;
-    --light-bg: #f8f9fa;
+    /* Nueva Paleta: Soft Modern */
+    --primary-color: #4F46E5;    /* Indigo */
+    --primary-hover: #4338ca;
+    --secondary-color: #10B981;  /* Emerald */
+    --secondary-hover: #059669;
+    --accent-color: #F59E0B;     /* Amber */
+    --danger-color: #EF4444;     /* Red */
+    
+    --bg-color: #F3F4F6;         /* Cool Gray 100 */
+    --card-bg: #FFFFFF;          /* White */
+    
+    --text-main: #1F2937;        /* Gray 900 */
+    --text-secondary: #6B7280;   /* Gray 500 */
+    --text-light: #F9FAFB;       /* Gray 50 */
+    
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    
+    --radius-md: 0.5rem;
+    --radius-lg: 0.75rem;
+    --radius-xl: 1rem;
 }
 
 /* ==========================================
@@ -16,11 +32,29 @@
    ========================================== */
 
 body {
-    background-color: var(--light-bg);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--text-main);
+    font-weight: 700;
+    letter-spacing: -0.025em;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: var(--primary-hover);
 }
 
 /* ==========================================
@@ -28,14 +62,20 @@ body {
    ========================================== */
 
 .login-page {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #4F46E5 0%, #818CF8 100%);
     min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .login-card {
-    border-radius: 15px;
+    background: var(--card-bg);
+    border-radius: var(--radius-xl);
     border: none;
-    animation: fadeInUp 0.5s ease-out;
+    box-shadow: var(--shadow-lg);
+    animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    padding: 2rem;
 }
 
 @keyframes fadeInUp {
@@ -49,40 +89,32 @@ body {
     }
 }
 
-@keyframes slideIn {
-    from {
-        opacity: 0;
-        transform: translateX(100%);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes slideOut {
-    from {
-        opacity: 1;
-        transform: translateX(0);
-    }
-    to {
-        opacity: 0;
-        transform: translateX(100%);
-    }
-}
-
 /* ==========================================
    NAVBAR
    ========================================== */
 
 .navbar {
-    border-bottom: 3px solid var(--primary-color);
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background-color: var(--card-bg) !important;
+    border-bottom: 1px solid #E5E7EB;
+    box-shadow: var(--shadow-sm);
+    padding: 1rem 0;
 }
 
 .navbar-brand {
+    color: var(--primary-color) !important;
     font-size: 1.5rem;
-    font-weight: 700;
+    font-weight: 800;
+    letter-spacing: -0.025em;
+}
+
+.nav-link {
+    color: var(--text-secondary) !important;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--primary-color) !important;
 }
 
 /* ==========================================
@@ -90,10 +122,16 @@ body {
    ========================================== */
 
 .hero-section {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    padding: 60px 0;
+    background: linear-gradient(to right, #4F46E5, #6366F1);
+    padding: 80px 0;
     margin-bottom: 40px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-radius: 0 0 var(--radius-xl) var(--radius-xl);
+    box-shadow: var(--shadow-md);
+    color: white;
+}
+
+.hero-section h1 {
+    color: white;
 }
 
 /* ==========================================
@@ -101,27 +139,44 @@ body {
    ========================================== */
 
 .product-card {
-    transition: all 0.3s ease-in-out;
-    border-radius: 12px;
+    background: var(--card-bg);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: var(--radius-lg);
     overflow: hidden;
-    border: none;
+    border: 1px solid #E5E7EB;
     height: 100%;
+    box-shadow: var(--shadow-sm);
 }
 
 .product-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-color);
 }
 
 .card-img-top {
-    height: 220px;
+    height: 240px;
     object-fit: cover;
-    transition: transform 0.3s ease;
-    background-color: #f0f0f0;
+    transition: transform 0.5s ease;
+    background-color: #F9FAFB;
 }
 
 .product-card:hover .card-img-top {
     transform: scale(1.05);
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.card-title {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-main);
+}
+
+.card-text {
+    color: var(--text-secondary);
 }
 
 /* ==========================================
@@ -130,9 +185,12 @@ body {
 
 .product-detail-img {
     max-height: 500px;
-    object-fit: cover;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    object-fit: contain;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    background: white;
+    padding: 1rem;
 }
 
 /* ==========================================
@@ -142,25 +200,27 @@ body {
 .category-link {
     cursor: pointer;
     transition: all 0.2s ease;
-    border-radius: 8px;
-    padding: 12px 16px;
-    margin-bottom: 5px;
-    border: 1px solid #dee2e6;
+    border-radius: var(--radius-md);
+    padding: 10px 16px;
+    margin-bottom: 8px;
+    border: 1px solid transparent;
     text-decoration: none;
-    color: #212529;
+    color: var(--text-secondary);
+    background-color: transparent;
+    font-weight: 500;
+    display: block;
 }
 
 .category-link:hover {
-    background-color: var(--primary-color);
-    color: white !important;
-    transform: translateX(5px);
-    border-color: var(--primary-color);
+    background-color: #EEF2FF; /* Indigo 50 */
+    color: var(--primary-color);
+    transform: translateX(4px);
 }
 
 .category-link.active {
     background-color: var(--primary-color);
     color: white !important;
-    font-weight: 600;
+    box-shadow: var(--shadow-sm);
 }
 
 /* ==========================================
@@ -171,7 +231,8 @@ body {
     width: 80px;
     height: 80px;
     object-fit: cover;
-    border-radius: 8px;
+    border-radius: var(--radius-md);
+    border: 1px solid #E5E7EB;
 }
 
 /* ==========================================
@@ -179,22 +240,58 @@ body {
    ========================================== */
 
 .badge {
-    padding: 8px 16px;
+    padding: 0.5em 0.8em;
     font-weight: 600;
+    border-radius: var(--radius-md);
+    letter-spacing: 0.025em;
 }
+
+.bg-primary { background-color: var(--primary-color) !important; }
+.bg-secondary { background-color: var(--secondary-color) !important; }
+.bg-danger { background-color: var(--danger-color) !important; }
 
 /* ==========================================
    BOTONES
    ========================================== */
 
 .btn {
-    transition: all 0.3s ease;
-    font-weight: 500;
+    padding: 0.625rem 1.25rem;
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    transition: all 0.2s;
+    border: none;
 }
 
-.btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+    box-shadow: 0 4px 6px -1px rgba(79, 70, 229, 0.2);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 8px -1px rgba(79, 70, 229, 0.3);
+}
+
+.btn-success {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.btn-success:hover {
+    background-color: var(--secondary-hover);
+}
+
+.btn-outline-primary {
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    background: transparent;
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary-color);
+    color: white;
 }
 
 /* ==========================================
@@ -208,28 +305,15 @@ body {
 }
 
 /* ==========================================
-   ANIMACIONES
-   ========================================== */
-
-@keyframes pulse {
-    0%, 100% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.05);
-    }
-}
-
-.btn-success:hover {
-    animation: pulse 0.5s ease;
-}
-
-/* ==========================================
    FOOTER
    ========================================== */
 
 footer {
     margin-top: auto;
+    background-color: var(--card-bg);
+    border-top: 1px solid #E5E7EB;
+    padding: 2rem 0;
+    color: var(--text-secondary);
 }
 
 /* ==========================================
@@ -239,6 +323,7 @@ footer {
 @media (max-width: 768px) {
     .hero-section {
         padding: 40px 0;
+        border-radius: 0;
     }
     
     .product-detail-img {
@@ -255,35 +340,30 @@ footer {
    UTILIDADES
    ========================================== */
 
-.shadow-sm {
-    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;
-}
+.shadow-sm { box-shadow: var(--shadow-sm) !important; }
+.shadow { box-shadow: var(--shadow-md) !important; }
+.shadow-lg { box-shadow: var(--shadow-lg) !important; }
 
-.shadow {
-    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
-}
-
-.shadow-lg {
-    box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;
-}
+.text-primary { color: var(--primary-color) !important; }
+.text-muted { color: var(--text-secondary) !important; }
 
 /* ==========================================
    SCROLLBAR PERSONALIZADA
    ========================================== */
 
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    background: var(--bg-color);
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #888;
-    border-radius: 5px;
+    background: #D1D5DB;
+    border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #555;
+    background: #9CA3AF;
 }

@@ -2,43 +2,43 @@
 // DASHBOARD.JS - Lógica específica del Dashboard
 // ==========================================
 
-console.log('✅ dashboard.js cargado');
+console.log('dashboard.js cargado');
 
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('🔄 Inicializando dashboard...');
+    console.log('Inicializando dashboard...');
 
     try {
         // Cargar datos desde LocalStorage
         const { productos } = getTiendaData();
 
         if (!productos || productos.length === 0) {
-            console.error('❌ No hay productos disponibles');
+            console.error('No hay productos disponibles');
             document.getElementById('noProductsMessage')?.classList.remove('d-none');
             return;
         }
 
-        console.log('📦 Total de productos:', productos.length);
+        console.log('Total de productos:', productos.length);
 
         // Filtrar productos destacados
         const destacados = productos.filter(p => p.destacado);
-        console.log('⭐ Productos destacados:', destacados.length);
+        console.log('Productos destacados:', destacados.length);
 
         const contenedor = document.getElementById('productosDestacados');
 
         if (!contenedor) {
-            console.error('❌ No se encontró el contenedor de productos');
+            console.error('No se encontró el contenedor de productos');
             return;
         }
 
         if (destacados.length === 0) {
-            console.log('⚠️ No hay productos destacados');
+            console.log('No hay productos destacados');
             document.getElementById('noProductsMessage')?.classList.remove('d-none');
             return;
         }
 
         // Renderizar cada producto destacado
         destacados.forEach(producto => {
-            console.log('➕ Renderizando:', producto.nombre);
+            console.log('Renderizando:', producto.nombre);
 
             const col = document.createElement('div');
             col.classList.add('col');
@@ -70,12 +70,12 @@ document.addEventListener('DOMContentLoaded', () => {
             contenedor.appendChild(col);
         });
 
-        console.log('✅ Dashboard cargado correctamente');
+        console.log('Dashboard cargado correctamente');
 
     } catch (error) {
-        console.error('❌ Error al cargar dashboard:', error);
+        console.error('Error al cargar dashboard:', error);
         alert('Error al cargar los productos. Por favor, recarga la página.');
     }
 });
 
-console.log('✅ dashboard.js completamente cargado');
+console.log('dashboard.js completamente cargado');

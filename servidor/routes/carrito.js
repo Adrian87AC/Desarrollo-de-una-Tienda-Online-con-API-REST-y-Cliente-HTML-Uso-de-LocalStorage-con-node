@@ -94,14 +94,14 @@ router.post('/agregar', (req, res) => {
 // POST - Realizar checkout (compra)
 router.post('/checkout', (req, res) => {
     try {
-        console.log('🛒 INICIANDO CHECKOUT');
+        console.log('INICIANDO CHECKOUT');
         const datos = leerDatos();
         const { carrito } = req.body; // Esperamos recibir el array de items del carrito
 
-        console.log('📦 Carrito recibido:', JSON.stringify(carrito, null, 2));
+        console.log('Carrito recibido:', JSON.stringify(carrito, null, 2));
 
         if (!carrito || !Array.isArray(carrito) || carrito.length === 0) {
-            console.log('❌ Carrito inválido o vacío');
+            console.log('Carrito inválido o vacío');
             return res.status(400).json({ error: 'El carrito está vacío o es inválido' });
         }
 
@@ -116,33 +116,33 @@ router.post('/checkout', (req, res) => {
             const producto = datos.productos.find(p => String(p.id) === String(item.id));
 
             if (!producto) {
-                console.log(`❌ Producto no encontrado: ${item.id}`);
+                console.log(`Producto no encontrado: ${item.id}`);
                 errores.push(`Producto ${item.nombre} no encontrado`);
                 continue;
             }
 
-            console.log(`✅ Producto encontrado: ${producto.nombre}, Stock actual: ${producto.stock}, Solicitado: ${item.cantidad}`);
+            console.log(`Producto encontrado: ${producto.nombre}, Stock actual: ${producto.stock}, Solicitado: ${item.cantidad}`);
 
             if (producto.stock < item.cantidad) {
-                console.log(`❌ Stock insuficiente para ${producto.nombre}`);
+                console.log(`Stock insuficiente para ${producto.nombre}`);
                 errores.push(`Stock insuficiente para ${item.nombre}. Disponible: ${producto.stock}, Solicitado: ${item.cantidad}`);
             }
         }
 
         if (errores.length > 0) {
-            console.log('❌ Errores de validación:', errores);
+            console.log('Errores de validación:', errores);
             return res.status(400).json({ error: 'Error de stock', detalles: errores });
         }
 
         // Si todo está bien, restar stock
-        console.log('📉 Restando stock...');
+        console.log('Restando stock...');
         carrito.forEach(item => {
             // Búsqueda flexible de nuevo
             const producto = datos.productos.find(p => String(p.id) === String(item.id));
             if (producto) {
                 const stockAnterior = producto.stock;
                 producto.stock -= item.cantidad;
-                console.log(`   ⬇️ ${producto.nombre}: ${stockAnterior} -> ${producto.stock}`);
+                console.log(`${producto.nombre}: ${stockAnterior} -> ${producto.stock}`);
 
                 productosActualizados.push({
                     id: producto.id,
@@ -153,9 +153,9 @@ router.post('/checkout', (req, res) => {
         });
 
         // Guardar cambios en tienda.json
-        console.log('💾 Guardando cambios en tienda.json...');
+        console.log('Guardando cambios en tienda.json...');
         guardarDatos(datos);
-        console.log('✅ Cambios guardados correctamente');
+        console.log('Cambios guardados correctamente');
 
         res.json({
             mensaje: 'Compra realizada con éxito',
@@ -163,7 +163,7 @@ router.post('/checkout', (req, res) => {
         });
 
     } catch (error) {
-        console.error('❌ Error CRÍTICO en checkout:', error);
+        console.error('Error CRÍTICO en checkout:', error);
         res.status(500).json({ error: 'Error al procesar la compra' });
     }
 });

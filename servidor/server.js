@@ -25,12 +25,12 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // IMPORTANTE: Servir archivos estáticos ANTES de las rutas API
 // Esto permite que los archivos HTML, CSS, JS se sirvan correctamente
 const clientPath = path.join(__dirname, '..', 'client');
-console.log('📁 Sirviendo archivos estáticos desde:', clientPath);
+console.log('Sirviendo archivos estáticos desde:', clientPath);
 app.use(express.static(clientPath));
 
 // Servir imágenes desde la carpeta servidor/img
 const imgPath = path.join(__dirname, 'img');
-console.log('📁 Sirviendo imágenes desde:', imgPath);
+console.log('Sirviendo imágenes desde:', imgPath);
 app.use('/img', express.static(imgPath));
 
 // CORS
@@ -74,7 +74,7 @@ app.get('/', (req, res) => {
 // ==========================================
 
 app.use((req, res) => {
-    console.log('❌ Ruta no encontrada:', req.path);
+    console.log('Ruta no encontrada:', req.path);
     res.status(404).json({
         mensaje: 'Ruta no encontrada: ' + req.path
     });
@@ -85,7 +85,7 @@ app.use((req, res) => {
 // ==========================================
 
 app.use((err, req, res, next) => {
-    console.error('❌ Error del servidor:', err);
+    console.error('Error del servidor:', err);
     res.status(500).json({
         mensaje: 'Error interno del servidor',
         error: err.message
@@ -98,13 +98,13 @@ app.use((err, req, res, next) => {
 
 app.listen(PORT, () => {
     console.log('\n' + '='.repeat(70));
-    console.log('🏋️  GYM SHOP - Servidor Iniciado');
+    console.log('GYM SHOP - Servidor Iniciado');
     console.log('='.repeat(70));
-    console.log(`🚀 Servidor corriendo en: http://localhost:${PORT}`);
-    console.log(`📱 Accede al cliente en: http://localhost:${PORT}/login.html`);
-    console.log(`📦 API REST disponible en: http://localhost:${PORT}/api/`);
+    console.log(`Servidor corriendo en: http://localhost:${PORT}`);
+    console.log(`Accede al cliente en: http://localhost:${PORT}/login.html`);
+    console.log(`API REST disponible en: http://localhost:${PORT}/api/`);
     console.log('='.repeat(70));
-    console.log('\n📋 Credenciales de prueba:');
+    console.log('\nCredenciales de prueba:');
     console.log('   Usuario: admin | Contraseña: 12345');
     console.log('   Usuario: cliente | Contraseña: password');
     console.log('\n⏹  Presiona CTRL+C para detener el servidor\n');
@@ -113,20 +113,20 @@ app.listen(PORT, () => {
     const usuariosPath = path.join(__dirname, 'data', 'usuarios.json');
     const tiendaPath = path.join(__dirname, 'data', 'tienda.json');
 
-    console.log('🔍 Verificando archivos de datos...');
-    console.log('   usuarios.json:', fs.existsSync(usuariosPath) ? '✅ Existe' : '❌ NO EXISTE');
-    console.log('   tienda.json:', fs.existsSync(tiendaPath) ? '✅ Existe' : '❌ NO EXISTE');
+    console.log('Verificando archivos de datos...');
+    console.log('   usuarios.json:', fs.existsSync(usuariosPath) ? 'Existe' : 'NO EXISTE');
+    console.log('   tienda.json:', fs.existsSync(tiendaPath) ? 'Existe' : 'NO EXISTE');
 
     // Verificar que la carpeta client existe
-    console.log('\n🔍 Verificando carpeta client...');
+    console.log('\nVerificando carpeta client...');
     console.log('   Ruta:', clientPath);
-    console.log('   Existe:', fs.existsSync(clientPath) ? '✅ Sí' : '❌ NO');
+    console.log('   Existe:', fs.existsSync(clientPath) ? 'Sí' : 'NO');
 
     if (fs.existsSync(clientPath)) {
         const loginPath = path.join(clientPath, 'login.html');
         const dashboardPath = path.join(clientPath, 'dashboard.html');
-        console.log('   login.html:', fs.existsSync(loginPath) ? '✅ Existe' : '❌ NO EXISTE');
-        console.log('   dashboard.html:', fs.existsSync(dashboardPath) ? '✅ Existe' : '❌ NO EXISTE');
+        console.log('   login.html:', fs.existsSync(loginPath) ? 'Existe' : 'NO EXISTE');
+        console.log('   dashboard.html:', fs.existsSync(dashboardPath) ? 'Existe' : 'NO EXISTE');
     }
 
     console.log('');
